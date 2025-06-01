@@ -8,6 +8,7 @@ A generative algorithm that evolves musical motifs using a tree-based structure 
 
 musical_tree.cc: Core implementation of the MusicalTree class and evolutionary algorithm.
 musical_tree.hpp: (Not included in this repository snippet) Expected to define the MusicalTree, MotifNode, and Note structures or classes.
+
 🌲 Project Overview
 
 The MusicalTree class represents a recursive tree where:
@@ -43,11 +44,13 @@ To control tree size, nodes with low fitness are pruned:
 
 Weak nodes are removed or replaced by their strongest child.
 Ensures diversity while maintaining manageability.
+
 🧪 Usage
 
 MusicalTree tree(/*verbose=*/true);
 tree.GeneticAlgorithm(10); // evolve for 10 generations
 auto melody = tree.GenerateMelody(); // get final melody as vector<Note>
+
 🧠 Example Output
 
 Terminal output during evolution might look like:
@@ -59,16 +62,19 @@ Child:     49-0.1 77-0.6 ...
 PRUNE
 prune cutoff: 10
 size: 5
+
 🔧 Dependencies
 
 Standard C++ libraries only (<vector>, <iostream>, <cmath>, etc.)
 Randomness via rand(), so results vary on each run.
+
 🚀 Future Improvements
 
 Replace rand() with C++11 <random> for reproducibility.
 Integrate MIDI output support.
 Add rhythm or harmony layers for polyphonic generation.
 Visualize tree structure.
+
 📜 License
 
 MIT License (or your preferred license)
